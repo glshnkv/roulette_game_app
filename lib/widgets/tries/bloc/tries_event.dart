@@ -5,7 +5,6 @@ abstract class TriesEvent {}
 
 class GetTriesEvent extends TriesEvent {}
 
-class CheckCountTriesEvent extends TriesEvent {}
 
 class DecrementTriesEvent extends TriesEvent {}
 

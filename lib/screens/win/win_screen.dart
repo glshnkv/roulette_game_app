@@ -46,6 +46,7 @@ class _WinScreenState extends State<WinScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
+                            context.read<InventoryBloc>().add(AddItemEvent(item: widget.item));
                             context.router.popAndPush(LobbyRoute());
                           },
                           child: SvgPicture.asset(
@@ -142,7 +143,6 @@ class _WinScreenState extends State<WinScreen> {
                 GestureDetector(
                   onTap: () {
                     context.read<InventoryBloc>().add(AddItemEvent(item: widget.item));
-                    context.read<TriesBloc>().add(CheckCountTriesEvent());
                     widget.type == GameType.roulette ?
                     context.router.push(RouletteRoute()) :
                     context.router.push(SlotsRoute());
