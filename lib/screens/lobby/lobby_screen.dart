@@ -86,33 +86,31 @@ class _LobbyScreenState extends State<LobbyScreen> {
             ),
             Container(
               height: 60,
-              child: Expanded(
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 10,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              'assets/images/lobby/blue-circle.svg',
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/images/lobby/blue-circle.svg',
+                          ),
+                          Text(
+                            '${index + 1}',
+                            style: TextStyle(
+                              color: AppColors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
                             ),
-                            Text(
-                              '${index + 1}',
-                              style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }),
-              ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
             ),
             Column(
               children: [

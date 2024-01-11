@@ -59,28 +59,23 @@ class _SlotMachineGameState extends State<SlotMachineGame> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Stack(
+            alignment: Alignment.center,
             children: [
-              Positioned(
-                child: Align(
-                  child: SvgPicture.asset(
-                      'assets/images/slots/slot.svg'),
-                ),
-              ),
+              SvgPicture.asset(
+                  'assets/images/slots/slot.svg'),
               Center(
                 child: SizedBox(
                   height: 200,
                   width: 320,
-                  child: Positioned(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Roll(image: images[selectedImages[0]]),
-                          Roll(image: images[selectedImages[1]]),
-                          Roll(image: images[selectedImages[2]]),
-                        ],
-                      ),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Roll(image: images[selectedImages[0]]),
+                        Roll(image: images[selectedImages[1]]),
+                        Roll(image: images[selectedImages[2]]),
+                      ],
                     ),
                   ),
                 ),

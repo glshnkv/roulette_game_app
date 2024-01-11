@@ -78,28 +78,26 @@ class _InventoryScreenState extends State<InventoryScreen> {
                           .of(context)
                           .size
                           .height * 0.755,
-                      child: Expanded(
-                        child: GridView.builder(
-                          itemCount: state.inventory.length,
-                          padding: EdgeInsets.zero,
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 3),
-                          itemBuilder: (BuildContext context, int index) {
-                            return Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                Image.asset(
-                                  'assets/images/elements/inventory-card.png',
-                                ),
-                                Image.asset(
-                                  '${state.inventory[index]}',
-                                  width: 70,
-                                )
-                              ],
-                            );
-                          },
-                        ),
+                      child: GridView.builder(
+                        itemCount: state.inventory.length,
+                        padding: EdgeInsets.zero,
+                        physics: NeverScrollableScrollPhysics(),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/elements/inventory-card.png',
+                              ),
+                              Image.asset(
+                                '${state.inventory[index]}',
+                                width: 70,
+                              )
+                            ],
+                          );
+                        },
                       ),
                     );
                   }
